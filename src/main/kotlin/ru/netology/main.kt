@@ -348,6 +348,5 @@ fun main() {
     wallService.add(post)
     wallService.add(post)
     wallService.update(post1)
-    val addedComment = wallService.createComment(comment)
-    println(addedComment)
+    wallService.createComment(comment)
 }
