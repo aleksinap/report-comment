@@ -322,7 +322,7 @@ fun main() {
     val comment = Comment(
         id = 1231,
         fromId = 4342,
-        postId = 3,
+        postId = 33,
         date = 324567,
         text = "Привет",
         replyToUser = 3423,
@@ -348,5 +348,6 @@ fun main() {
     wallService.add(post)
     wallService.add(post)
     wallService.update(post1)
-    wallService.createComment(comment)
+    val addedComment = wallService.createComment(comment)
+    println(addedComment)
 }

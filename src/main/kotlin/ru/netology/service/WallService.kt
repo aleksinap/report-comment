@@ -25,7 +25,7 @@ class  WallService() {
 
     fun createComment(comment: Comment) {
         var isAdded = false
-        for(i in posts.indices){
+        for(i in posts.indices) {
             if(posts[i].id == comment.postId) {
                 comments += comment
                 isAdded = true
