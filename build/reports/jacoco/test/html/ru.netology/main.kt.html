@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>main.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JUnit</a> &gt; <a href="index.source.html" class="el_package">ru.netology</a> &gt; <span class="el_source">main.kt</span></div><h1>main.kt</h1><pre class="source lang-java linenums">package ru.netology
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>main.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">report-comment</a> &gt; <a href="index.source.html" class="el_package">ru.netology</a> &gt; <span class="el_source">main.kt</span></div><h1>main.kt</h1><pre class="source lang-java linenums">package ru.netology
 
 import ru.netology.data.*
 import ru.netology.service.WallService
@@ -322,7 +322,7 @@ fun main() {
 <span class="nc" id="L322">    val comment = Comment(</span>
 <span class="nc" id="L323">        id = 1231,</span>
 <span class="nc" id="L324">        fromId = 4342,</span>
-<span class="nc" id="L325">        postId = 33,</span>
+<span class="nc" id="L325">        postId = 3,</span>
 <span class="nc" id="L326">        date = 324567,</span>
 <span class="nc" id="L327">        text = &quot;РџСЂРёРІРµС‚&quot;,</span>
 <span class="nc" id="L328">        replyToUser = 3423,</span>
@@ -343,12 +343,36 @@ fun main() {
 <span class="nc" id="L343">        thread = null</span>
     )
 
-<span class="nc" id="L346">    val wallService = WallService()</span>
-<span class="nc" id="L347">    wallService.add(post)</span>
-<span class="nc" id="L348">    wallService.add(post)</span>
-<span class="nc" id="L349">    wallService.add(post)</span>
-<span class="nc" id="L350">    wallService.update(post1)</span>
-<span class="nc" id="L351">    val addedComment = wallService.createComment(comment)</span>
-<span class="nc" id="L352">    println(addedComment)</span>
-<span class="nc" id="L353">}</span>
+<span class="nc" id="L346">    val comment1 = Comment(</span>
+<span class="nc" id="L347">        id = 12315,</span>
+<span class="nc" id="L348">        fromId = 4342,</span>
+<span class="nc" id="L349">        postId = 3,</span>
+<span class="nc" id="L350">        date = 324567,</span>
+<span class="nc" id="L351">        text = &quot;РџСЂРёРІРµС‚&quot;,</span>
+<span class="nc" id="L352">        replyToUser = 3423,</span>
+<span class="nc" id="L353">        replyToComment = 1231,</span>
+<span class="nc" id="L354">        attachments = NoteAttachment(</span>
+<span class="nc" id="L355">            note = Note(</span>
+<span class="nc" id="L356">                id = 1,</span>
+<span class="nc" id="L357">                ownerId = 1,</span>
+<span class="nc" id="L358">                title = &quot;РќРµРґРѕСЃС‚СѓРїРЅРѕ&quot;,</span>
+<span class="nc" id="L359">                text = &quot;РќРµРґРѕСЃС‚СѓРїРЅРѕ&quot;,</span>
+<span class="nc" id="L360">                date = 1654,</span>
+<span class="nc" id="L361">                comments = 1,</span>
+<span class="nc" id="L362">                readComments = 1,</span>
+<span class="nc" id="L363">                viewUrl = &quot;https://netology.ru&quot;</span>
+            )
+        ),
+<span class="nc" id="L366">        parentsStack = null,</span>
+<span class="nc" id="L367">        thread = null</span>
+    )
+
+<span class="nc" id="L370">    val wallService = WallService()</span>
+<span class="nc" id="L371">    wallService.add(post)</span>
+<span class="nc" id="L372">    wallService.add(post)</span>
+<span class="nc" id="L373">    wallService.add(post)</span>
+<span class="nc" id="L374">    wallService.update(post1)</span>
+<span class="nc" id="L375">    wallService.createComment(comment)</span>
+<span class="nc" id="L376">    wallService.reportComment(comment1, 9)</span>
+<span class="nc" id="L377">}</span>
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

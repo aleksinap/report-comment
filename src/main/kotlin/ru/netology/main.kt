@@ -322,7 +322,31 @@ fun main() {
     val comment = Comment(
         id = 1231,
         fromId = 4342,
-        postId = 33,
+        postId = 3,
+        date = 324567,
+        text = "Привет",
+        replyToUser = 3423,
+        replyToComment = 1231,
+        attachments = NoteAttachment(
+            note = Note(
+                id = 1,
+                ownerId = 1,
+                title = "Недоступно",
+                text = "Недоступно",
+                date = 1654,
+                comments = 1,
+                readComments = 1,
+                viewUrl = "https://netology.ru"
+            )
+        ),
+        parentsStack = null,
+        thread = null
+    )
+
+    val comment1 = Comment(
+        id = 12315,
+        fromId = 4342,
+        postId = 3,
         date = 324567,
         text = "Привет",
         replyToUser = 3423,
@@ -349,4 +373,5 @@ fun main() {
     wallService.add(post)
     wallService.update(post1)
     wallService.createComment(comment)
+    wallService.reportComment(comment1, 9)
 }
